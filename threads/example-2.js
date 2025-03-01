@@ -43,3 +43,6 @@ crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
 // its work before it can start.
 // 3. Once a thread becomes available, the fifth operation starts, leading to
 // a noticeable delay.
+
+// You can also customize and limit the pool size this way:
+// process.env.UV_THREADPOOL_SIZE = 2;
