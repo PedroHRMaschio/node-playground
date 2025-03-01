@@ -11,6 +11,8 @@ crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
 
 // This shows that the node is not truly single thread.
 
-// When you comment one crypto function and runs alone,
-// you will see that the time is similar if you run them
-// both together, and not the double.
+// When you comment one crypto function and runs alone, you
+// will see that the time is similar if you run them both
+// together, and not the double.
+
+// It occurs because the function pbkdf2 uses the thread pool
