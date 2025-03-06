@@ -13,3 +13,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
+
+// use $ pm2 start index-example-3.js -i 0 to run the server with all the cores avalables
+// use pm2 delete index-example-3 to stop the server
